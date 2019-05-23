@@ -1,4 +1,4 @@
-# 标题:python re模块常用方法
+# python re模块常用方法
 ---
 >re, regular expressin的缩写，即正则表达式
 ## **正则表达式-主要语法**
@@ -31,11 +31,11 @@
 | re.S | 使 . 匹配包括换行在内的所有字符 |
 | ... | ... |
 ## **re模块-常用函数**
-+re.match
-+re.search
-+re.findall
-+re.split
-+re.sub
+*re.match
+*re.search
+*re.findall
+*re.split
+*re.sub
 
 >match和search的区别:
 >search和findall的区别:
