@@ -30,8 +30,29 @@
 | re.S | 使 . 匹配包括换行在内的所有字符 |
 | ... | ... |
 ## **re模块-常用函数**
-- re.match
-- re.search
++ re.match和re.search
+match匹配字符串的开始，匹配成功返回matchobject，否则返回none
+search匹配整个字符串，匹配成功返回matchobject，否则返回none
+例如对于字符串"asdfabbbb"
+```
+>>> m=re.match("^ab+","asdfabbbb")
+>>> print m
+None
+>>> m=re.match("ab+","asdfabbbb")
+>>> print m
+None
+```
+re.match从字符串的起始位置按正则表达式匹配，而re.search则不限制位置
+```
+>>> m=re.search("^ab+","asdfabbbb")
+>>> print m
+None
+>>> m=re.search("ab+","asdfabbbb")
+>>> print m
+<_sre.SRE_Match object at 0x011B1988>
+>>> print m.group()
+abbbb
+```
 - re.findall
 - re.split
 - re.sub
