@@ -34,8 +34,11 @@
 
 语法：
 >re.match(pattern, string, flags=0)
+
 >re.search(pattern, string, flags=0)
+
 参数说明：
+
 | 参数 | 描述 |
 | :------------ | :------------- |
 | pattern | 匹配的正则表达式RE |
@@ -66,12 +69,14 @@ None
 abbbb
 ```
 match()和seerch()如果匹配成功则返回一个Match Object对象，还有finditer()。该对象有以下方法：
+
 | 方法/属性 | 作用 |
 | :------------ | :------------- |
 | group() | 返回被RE匹配的字符串 |
 | start() | 返回匹配开始的位置 |
 | end() | 返回匹配结束的位置 |
 | span() | 返回一个元组包含匹配 (开始,结束) 的位置 |
+
 **实例1**
 ```
 print(re.match('www', 'www.runoob.com').span())  # 在起始位置匹配
@@ -80,6 +85,7 @@ print(re.search('com', 'www.runoob.com'))         # 不在起始位置匹配
 执行结果如下:
 >(0, 3)
 ><re.Match object; span=(11, 14), match='com'>
+
 **实例2**
 ```
 ```
