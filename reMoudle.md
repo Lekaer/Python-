@@ -45,9 +45,9 @@
 | string | 要匹配的字符串 |
 | flags | 标志位，用于控制正则表达式的匹配方式，如：是否区分大小写，多行匹配等 |
 
-match匹配字符串的开始，匹配成功返回matchobject，否则返回none
+>match匹配字符串的开始，匹配成功返回matchobject，否则返回none
 
-search匹配整个字符串，匹配成功返回matchobject，否则返回none
+>search匹配整个字符串，匹配成功返回matchobject，否则返回none
 
 例如对于字符串"asdfabbbb"
 ```
