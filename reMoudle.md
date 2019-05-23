@@ -31,6 +31,7 @@
 | ... | ... |
 ## **re模块-常用函数**
 + re.match和re.search
+
 match匹配字符串的开始，匹配成功返回matchobject，否则返回none
 search匹配整个字符串，匹配成功返回matchobject，否则返回none
 例如对于字符串"asdfabbbb"
