@@ -51,21 +51,21 @@
 
 例如对于字符串"asdfabbbb"
 ```
->>> m=re.match("^ab+","asdfabbbb")
->>> print m
-None
 >>> m=re.match("ab+","asdfabbbb")
->>> print m
+>>> print(m)
 None
+>>> m=re.match("as+","asdfabbbb")
+>>> print(m)
+<re.Match object; span=(0, 2), match='as'>
 ```
 re.match从字符串的起始位置按正则表达式匹配，而re.search则不限制位置
 ```
 >>> m=re.search("^ab+","asdfabbbb")
->>> print m
+>>> print(m)
 None
 >>> m=re.search("ab+","asdfabbbb")
->>> print m
-<_sre.SRE_Match object at 0x011B1988>
+>>> print(m)
+<re.Match object; span=(4, 9), match='abbbb'>
 >>> print m.group()
 abbbb
 ```
@@ -89,20 +89,23 @@ print(re.search('com', 'www.runoob.com'))         # 不在起始位置匹配
 
 **实例2**
 ```
+line = "Cats are smarter than dogs" 
+searchObj = re.match( r'(.*) are (.*?) .*', line, re.M|re.I)
+
+if searchObj:
+   print("searchObj.group(0) : ", searchObj.group(0))
+   print("searchObj.group(1) : ", searchObj.group(1))
+   print("searchObj.group(2) : ", searchObj.group(2))
+else:
+   print("Nothing found!!")
 ```
 执行结果如下:
->
->
->
-**实例3**
-```
-```
-执行结果如下:
->
->
->
-**实例4**
+>searchObj.group(0) :  Cats are smarter than dogs
+>searchObj.group(1) :  Cats
+>searchObj.group(2) :  smarter
+
 + re.findall和re.finditer
+
 + re.compile
 - re.split
 - re.sub
