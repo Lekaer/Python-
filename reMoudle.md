@@ -112,5 +112,28 @@ else:
 + re.compile
 - re.split
 - re.sub
+>sub是substitute的所写，表示替换
+
+>主要作用是对于输入的一个字符串，利用正则表达式实现（相对复杂的）字符串替换处理，然后返回被替换后的字符串
+
+语法：
+>re.sub(pattern, repl, string, count=0, flags=0)
+
+参数说明：
+
+| 参数 | 描述 |
+| :------------ | :------------- |
+| pattern | 匹配的正则表达式RE |
+| repl | 被替换的字符串,也可以是函数 |
+| string | 表示要被处理，要被替换的那个字符串 |
+| count | 表示被处理的符合pattern的表达式个数 |
+| flags | 标志位，用于控制正则表达式的匹配方式，如：是否区分大小写，多行匹配等 |
+
+**实例1**
+
+**实例2**
+
+
+
 >match和search的区别:
 >search和findall的区别:
