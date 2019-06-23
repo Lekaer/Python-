@@ -85,6 +85,7 @@ print(re.search('com', 'www.runoob.com'))         # 不在起始位置匹配
 ```
 执行结果如下:
 >(0, 3)
+
 ><re.Match object; span=(11, 14), match='com'>
 
 **实例2**
@@ -101,7 +102,9 @@ else:
 ```
 执行结果如下:
 >searchObj.group(0) :  Cats are smarter than dogs
+
 >searchObj.group(1) :  Cats
+
 >searchObj.group(2) :  smarter
 
 + re.findall和re.finditer
