@@ -110,6 +110,19 @@ else:
 + ### **re.findall和re.finditer**
 
 + ### **re.compile**
+>在字符串中找到正则表达式所匹配的所有子串，并返回一个列表，如果没有找到匹配的，则返回空列表。
+
+语法：
+>findall(pattern, string, flags=0)
+
+参数说明：
+
+| 参数 | 描述 |
+| :------------ | :------------- |
+| pattern | 匹配的正则表达式RE |
+| string | 待匹配的字符串 |
+| flags | -- |
+
 - ### **re.split**
 - ### **re.sub**
 >sub是substitute的所写，表示替换
