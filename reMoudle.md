@@ -30,7 +30,7 @@
 | re.S | 使 . 匹配包括换行在内的所有字符 |
 | ... | ... |
 ## **re模块-常用函数**
-+ re.match和re.search
++ **re.match和re.search**
 
 语法：
 >re.match(pattern, string, flags=0)
@@ -107,11 +107,11 @@ else:
 
 >searchObj.group(2) :  smarter
 
-+ re.findall和re.finditer
++ **re.findall和re.finditer**
 
-+ re.compile
-- re.split
-- re.sub
++ **re.compile**
+- **re.split**
+- **re.sub**
 >sub是substitute的所写，表示替换
 
 >主要作用是对于输入的一个字符串，利用正则表达式实现（相对复杂的）字符串替换处理，然后返回被替换后的字符串
