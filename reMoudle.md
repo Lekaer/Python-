@@ -127,13 +127,37 @@ else:
 | repl | 被替换的字符串,也可以是函数 |
 | string | 表示要被处理，要被替换的那个字符串 |
 | count | 表示被处理的符合pattern的表达式个数 |
-| flags | 标志位，用于控制正则表达式的匹配方式，如：是否区分大小写，多行匹配等 |
 
 **实例1**
+```
+inputStr = "hello 111 world 111"
+replacedStr = inputStr.replace("111", "222")
+print(replacedStr)
+```
+执行结果如下：
+>hello 222 world 222
 
 **实例2**
+```
+inputStr = "hello 123 world 456"
+replacedStr = re.sub("\d+", "222", inputStr)
+print(replacedStr)
+```
+执行结果如下：
+>hello 222 world 222
 
+**实例3**
+```
+import re
+def _add_111(str_):
+    return str(int(str_.group()) + 111)
 
+if __name__ == '__main__':
+    str_ = 'hello 123 world 456 nihao 789'
+    print(re.sub('(?P<num>\d+)', _add_111, str_, 2))
+```
+执行结果如下：
+>hello 234 world 567 nihao 789
 
 >match和search的区别:
 >search和findall的区别:
