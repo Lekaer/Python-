@@ -30,7 +30,7 @@
 | re.S | 使 . 匹配包括换行在内的所有字符 |
 | ... | ... |
 ## **re模块-常用函数**
-+ **re.match和re.search**
++ ### **re.match和re.search**
 
 语法：
 >re.match(pattern, string, flags=0)
