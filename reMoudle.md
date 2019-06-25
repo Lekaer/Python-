@@ -108,6 +108,8 @@ else:
 
 >searchObj.group(2) :  smarter
 
++ ### **re.compile**
+
 + ### **re.findall和re.finditer**
 
 >在字符串中找到正则表达式所匹配的所有子串，并返回一个列表，如果没有找到匹配的，则返回空列表。
@@ -123,7 +125,30 @@ else:
 | string | 待匹配的字符串 |
 | flags | -- |
 
-+ ### **re.compile**
+**实例：**
+```
+>>> import re
+>>> s = "adfad asdfasdf asdfas asdfawef asd adsfas "
+ 
+>>> reObj1 = re.compile('((\w+)\s+\w+)')
+>>> reObj1.findall(s)
+[('adfad asdfasdf', 'adfad'), ('asdfas asdfawef', 'asdfas'), ('asd adsfas', 'asd')]
+ 
+>>> reObj2 = re.compile('(\w+)\s+\w+')
+>>> reObj2.findall(s)
+['adfad', 'asdfas', 'asd']
+ 
+>>> reObj3 = re.compile('\w+\s+\w+')
+>>> reObj3.findall(s)
+['adfad asdfasdf', 'asdfas asdfawef', 'asd adsfas']
+```
+**实例说明：
+
+1当给出的正则表达式中带有多个括号时，列表的元素为多个字符串组成的tuple，tuple中字符串个数与括号对数相同，字符串内容与每个括号内的正则表达式相对应，并且排放顺序是按括号出现的顺序。
+2当给出的正则表达式中带有一个括号时，列表的元素为字符串，此字符串的内容与括号中的正则表达式相对应（不是整个正则表达式的匹配内容）。
+3当给出的正则表达式中不带括号时，列表的元素为字符串，此字符串为整个正则表达式匹配的内容。
+
+
 - ### **re.split**
 - ### **re.sub**
 >sub是substitute的所写，表示替换
@@ -174,4 +199,5 @@ if __name__ == '__main__':
 >hello 234 world 567 nihao 789
 
 >match和search的区别:
+
 >search和findall的区别:
