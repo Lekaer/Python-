@@ -119,6 +119,7 @@ else:
 >re.compile(pattern, flags=0)
 
 **实例1**
+
 参考re.findall的实例1
 
 **实例2**
@@ -146,7 +147,7 @@ for regex in regexes:
 >repr(object)函数返回一个对象的string格式
 
 
-+ ### **re.findall和re.finditer**
++ ### **re.findall**
 
 >在字符串中找到正则表达式所匹配的所有子串，并返回一个列表，如果没有找到匹配的，则返回空列表。
 
