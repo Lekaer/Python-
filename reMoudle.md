@@ -112,8 +112,38 @@ else:
 
 + ### **re.compile**
 
+>将正则表达式模式编译为正则表达式对象，可以使用其match（）和search（）方法进行匹配
+>compile()函数会把一个表达式字符串转化成为一个RegexObject
+
 语法：
 >re.compile(pattern, flags=0)
+
+**实例1**
+参考re.findall的实例1
+
+**实例2**
+```
+import re 
+# Precompile the patterns
+regexes = [re.compile(p) for p in ['this', 'that']]
+text = "Does this text match the pattern?"
+print 'Text: %r\n' % repr(text)
+
+for regex in regexes:
+    print 'Seeking "%s"->' % regex.pattern,     
+    if regex.search(text):
+        print 'match!'
+    else:
+        print 'no match'
+```
+执行结果如下：
+>Text: "'Does this text match the pattern?'"
+
+>Seeking "this"-> match!
+>Seeking "that"-> no match
+
+说明：
+>repr(object)函数返回一个对象的string格式
 
 
 + ### **re.findall和re.finditer**
