@@ -260,7 +260,3 @@ if __name__ == '__main__':
 ```
 执行结果如下：
 >hello 234 world 567 nihao 789
-
->match和search的区别:
-
->search和findall的区别:
