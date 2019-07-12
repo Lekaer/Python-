@@ -213,6 +213,47 @@ for regex in regexes:
 ```
 
 - ### **re.split**
+>按照指定的 pattern 格式，分割 string 字符串，返回一个分割后的列表。
+
+语法：
+>re.split(pattern, string, maxsplit=0, flags=0)
+
+maxsplit 指定最大分割次数，默认为0，全部分割
+
+**实例1**
+```
+>>> import re
+>>> line = 'aaa bbb ccc;ddd   eee,fff'
+>>> line
+'aaa bbb ccc;ddd   eee,fff'
+```
+单字符切割
+```
+>>> re.split(r';',line)
+['aaa bbb ccc', 'ddd\teee,fff']
+```
+两个字符以上切割需要放在[]中
+```
+>>> re.split(r'[;,]',line)
+['aaa bbb ccc', 'ddd\teee', 'fff']
+```
+所有空白字符切割
+```
+>>> re.split(r'[;,\s]',line)
+['aaa', 'bbb', 'ccc', 'ddd', 'eee', 'fff']
+```
+使用括号捕获分组，默认保留分割符
+```
+>>> re.split(r'([;])',line)
+['aaa bbb ccc', ';', 'ddd\teee,fff']
+```
+不想保留分隔符，以（?:...）的形式指定
+```
+>>> re.split(r'(?:[;])',line)
+['aaa bbb ccc', 'ddd\teee,fff']
+```
+
+
 - ### **re.sub**
 >sub是substitute的所写，表示替换
 
