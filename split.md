@@ -18,11 +18,23 @@
 str = "Line1-abcdef \nLine2-abc \nLine4-abcd";
 print(str.split())           # 以空格为分隔符，包含 \n
 print(str.split(' ', 1 ))    # 以空格为分隔符，分隔成两个
-print(str.split(' ', 1 )[1]) # 输出第一个
+print(str.split(' ', 2 )[1]) # 分隔两次，输出第二个
 ```
 运行结果如下：
 ```
 ['Line1-abcdef', 'Line2-abc', 'Line4-abcd']
 ['Line1-abcdef', '\nLine2-abc \nLine4-abcd']
-Line1-abcdef
+Line2-abc
 ```
+
+**实例2**
+```
+>>> str="hello boy<[www.doiido.com]>byebye"
+
+>>> print str.split("[")[1].split("]")[0]
+www.doiido.com
+
+>>> print str.split("[")[1].split("]")[0].split(".")
+['www', 'doiido', 'com']
+```
+
