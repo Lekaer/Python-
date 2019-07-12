@@ -84,8 +84,7 @@ www.doiido.com
 ['www','google','com']
 ```
 
-## 3 split()与re.split()
-**str.split()与re.split()**
+## 3 str.split()与re.split()
 + str.split不支持正则及多个切割符号，不感知空格的数量
 
 例如：
