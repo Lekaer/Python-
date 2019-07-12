@@ -37,4 +37,14 @@ www.doiido.com
 >>> print str.split("[")[1].split("]")[0].split(".")
 ['www', 'doiido', 'com']
 ```
+**os.path.split('PATH')**
+说明：
++ PATH指一个文件的全路径作为参数
+
++ 如果给出的是一个目录和文件名，则输出路径和文件名
+
++如果给出的是一个目录名，则输出路径和为空文件名
+
+
+
 
