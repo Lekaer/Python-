@@ -71,6 +71,7 @@ www.doiido.com
 3abcrunoob3
 ```
 + strip().split()
+
 **实例**
 ```
 >>> str = '  www.google.com.cn '
