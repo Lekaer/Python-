@@ -70,3 +70,30 @@ www.doiido.com
 >>>str.strip( '12' )      # 字符序列为 12
 3abcrunoob3
 ```
++ strip().split()
+**实例**
+```
+>>> str = '  www.google.com.cn '
+>>> str_split = str.strip().split('.')
+['www','google','com','cn']
+
+>>> str_split[::-1]
+['cn','com' 'google','www']
+>>> str_split[:-1]
+['www','google','com']
+```
+
+## 3 split()与re.split()
+**str.split()与re.split()**
++ str.split不支持正则及多个切割符号，不感知空格的数量
+
+例如：
+```
+>>> s1="aa bb  cc"
+>>> s1.split(' ')
+['aa', 'bb', '', 'cc']
+```
++ re.split，支持正则及多个字符切割
+
+
+
