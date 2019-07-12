@@ -220,7 +220,7 @@ for regex in regexes:
 
 maxsplit 指定最大分割次数，默认为0，全部分割
 
-**实例1**
+**实例**
 ```
 >>> import re
 >>> line = 'aaa bbb ccc;ddd   eee,fff'
